@@ -6,6 +6,10 @@ body {
 ul {
     list-style: none;
 }
+
+a {
+    text-decoration: none;
+}
 /* UTILITIES */
 .cta {
     display: inline-block;
@@ -25,22 +29,38 @@ ul {
 .text-center {
     text-align: center;
 }
+.main-text {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    font-weight: 500;
+}
 
+.small-text {
+    font-size: 0.8rem;
+}
 /* color */
 .heading-color {
     color: #031c4e;
 }
+.white-text {
+    color: #fff;
+}
+.text-light-color {
+    color: #bbcdff;
+}
+.text-color {
+    color: #677490;
+}
 
+.main-link {
+    color: #1874ff;
+}
 
 
 /* HEADER CONTENT */
 header {
     height: 65px;
     line-height: 65px;
-}
-
-header a {
-    text-decoration: none;
 }
 
 header .brand img {
@@ -57,19 +77,116 @@ header .desktop-nav {
     display: none;
 }
 /* MAIN CONTENT */
+/* hero */
+section.hero {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    background-image: url(../img/bg-banner-home.jpg);
+    background-size: cover;
+    background-position: center;
+}
 
+h1 {
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+
+.hero-text p {
+    margin-top: 24px;
+    margin-bottom: 18px;
+}
+
+/* form login */
+.hero .form-login {
+    padding: 44px 20px 30px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.hero .form-login h2 {
+    font-size: 1.8rem;
+}
+.hero .form-login h2 > span {
+    display: block;
+    color: #0169ff;
+}
+
+.hero .form-login form > * {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #f2f2f2;
+    
+}
+
+.hero .form-login form input::placeholder {
+    padding-left: 5px;
+}
+
+.hero .form-login form > *:not([class="btn"]) {
+    height: 44px;
+}
+.hero .form-login form > .btn {
+    height: 32px;
+    line-height: 32px;
+}
+
+.btn.create-account {
+    background-color: #579aff;
+}
+
+.btn.account-google {
+    position: relative;
+    color: currentColor;
+    background-color: transparent;
+    box-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.1);
+}
+
+.btn.account-google img {
+    height: 70%;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+}
+
+.form-login form + div.small-text {
+    margin-top: 16px;
+}
+.form-login form + div.small-text a {
+    text-decoration: underline;
+    color: #1573ff;
+}
 /* FOOTER CONTENT */
 
 /* RESPONSIVE */
 /* MD TABLET 768 > */
+@media screen and (min-width: 768px) {
+    /* GENERAL */
+
+    /* UTILITIES */
+
+    /* hero section */
+    section.hero {
+        padding-top: 60px;
+    }
+
+    .hero-text {
+        margin-top: 25px;
+    }
+
+    .main-text {
+        font-size: 1.3rem;
+    }
+}
 
 /* LG DESKTOP  1170px > */
 @media screen and (min-width: 1170px) {
 
     /* GENERAL */
-    body {
-        font-size: 14px;
-    }
+
     /* UTILITIES */
     /* icon font */
     nav .center-nav > ul > li:nth-child(odd) > a::after,
@@ -80,7 +197,16 @@ header .desktop-nav {
         content: "\f107";
     }
 
+    /* text */
+    .main-text {
+        font-size: 1.4rem;
+    }
+
     /* header content */
+    header {
+        font-size: 14px;
+    }
+
     header nav .col-xs-7 {
         display: none;
     }
@@ -94,5 +220,22 @@ header .desktop-nav {
     nav .desktop-nav > .center-nav ul > li:not(:first-of-type),
     nav .desktop-nav > .right-nav ul > li:not(:first-of-type) {
         margin-left: 20px;
+    }
+
+    /* hero section */
+    section.hero {
+        padding-bottom: 66px;
+    }
+
+    h1 {
+        font-size: 3.7rem;
+    }
+
+    .hero-text p {
+        margin-top: 16px;
+    }
+
+    .form-login h2 {
+        line-height: 1.6em;
     }
 }
