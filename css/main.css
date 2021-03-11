@@ -18,6 +18,7 @@ section h2 {
 section h3 {
     margin-top: 22px;
     margin-bottom: 14px;
+    font-size: 15px;
 }
 /* UTILITIES */
 .cta {
@@ -40,6 +41,21 @@ section h3 {
     content: ">";
 }
 
+/* slider components */
+.slider a {
+    visibility: hidden;
+}
+
+.slide-number li {
+    display: inline-block;
+}
+.slide-number a {
+    color: #0169ff;
+}
+
+.slide-number a i {
+    font-size: 13px;
+} 
 
 /* text */
 .text-center {
@@ -186,6 +202,7 @@ section.customers {
     padding-top: 52px;
     padding-bottom: 35px;
 }
+
 section.customers > div.small-text {
     font-weight: 500;
 }
@@ -210,7 +227,7 @@ section.features h2 {
     margin-bottom: 16px;
 }
 
-section.features > .wrap-container div:first-child {
+section.features > .wrap-container > div:first-child {
     margin-bottom: 75px;
 }
 
@@ -218,7 +235,7 @@ section.features > .wrap-container aside:nth-child(2) {
     margin-bottom: 30px;
 }
 
-section.features > .wrap-container div:nth-child(1n + 3 ) {
+section.features > .wrap-container .row div {
     margin-bottom: 12px;
 }
 /* aside */
@@ -232,9 +249,26 @@ section.features aside ul a {
     color: currentColor;
 }
 
-/* designed section */
+/* designed-dev section */
+section.designed-dev {
+    padding-top: 85px;
+    padding-bottom: 70px;
+}
 
-section.designed .slide img {
+section.designed-dev p {
+    margin-top: 35px;
+    margin-bottom: 160px;
+}
+
+section.designed-dev .slide + div {
+    margin-top: 25px;
+}
+
+section.designed-dev .slide-number {
+    margin-top: 100px;
+}
+
+section.designed-dev .slide img {
     width: 100%;
 }
 
@@ -244,8 +278,32 @@ section.designed .slide img {
 /* MD TABLET 768 > */
 @media screen and (min-width: 768px) {
     /* GENERAL */
-
+    
     /* UTILITIES */
+    /* slider components */
+    .slider {
+        position: relative;
+    }
+    .core-slider {
+        display: inline-block;
+        margin: auto;
+    }
+    
+    .slider a {
+        visibility: visible;
+        display: inline-block;
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
+        font-size: 2.5rem;
+    }
+    .slider a:first-of-type {
+        right: 105%;
+        color: #6f7b97;
+    }
+    .slider a:last-of-type {
+        left: 105%;
+    }
 
     /* hero section */
     section.hero {
@@ -266,14 +324,15 @@ section.designed .slide img {
     }
 
     /* features section */
-    /* clearfix 2nd col */
-
-    .clearfix::after {
+    .row::after {
         display: table;
         content: "";
         clear: both;
     }
-/* !!!!!!!!!!!!!! */
+
+    section.features > .wrap-container .row div {
+        margin-bottom: 35px;
+    }
 }
 
 /* LG DESKTOP  1170px > */
@@ -334,5 +393,14 @@ section.designed .slide img {
 
     .form-login h2 {
         line-height: 1.6em;
+    }
+
+    /* designed-dev section */
+    section.designed-dev .slide-number {
+        margin-top: 14px;
+    }
+
+    section.designed-dev p {
+        margin-bottom: 75px;
     }
 }
