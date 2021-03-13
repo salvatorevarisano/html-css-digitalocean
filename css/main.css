@@ -1,6 +1,7 @@
 /* GENERAL */
 body {
     font-family: 'Inter', sans-serif;
+    padding-top: 65px;
 }
 
 ul {
@@ -12,7 +13,7 @@ a {
 }
 
 section h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
 }
 
 section h3 {
@@ -31,8 +32,16 @@ section h3 {
     border-radius: 5px;
 }
 .cta.big-cta {
+    margin-top: 15px;
     padding: 14px 16px;
     border: 1px solid #c2c4ca;
+}
+
+section.about-us,
+section.designed-dev,
+section.features {
+    padding-top: 85px;
+    padding-bottom: 70px;
 }
 
 /* icon font */
@@ -42,7 +51,7 @@ section h3 {
 }
 
 /* slider components */
-.slider a {
+.slider > a {
     visibility: hidden;
 }
 
@@ -88,6 +97,20 @@ section h3 {
     color: #1874ff;
     font-weight: 500;
 }
+.table-link {
+    color: #01c2cb;
+}
+
+.table-color {
+    color: #f3f6fb;
+}
+.table-secondary-color {
+    color: #abbce3;
+}
+
+.bg-primary-color {
+    background-image: linear-gradient(#0148c5, #001e99);
+}
 
 .bg-secondary-colour {
     background: #f3f5f9;
@@ -96,8 +119,14 @@ section h3 {
 
 /* HEADER CONTENT */
 header {
+    width: 100%;
     height: 65px;
     line-height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: #fff;
 }
 
 header .brand img {
@@ -174,6 +203,7 @@ h1 {
 }
 
 .btn.account-google {
+    padding-left: 33px;
     position: relative;
     color: currentColor;
     background-color: transparent;
@@ -218,11 +248,6 @@ section.customers li img {
 }
 
 /* features section */
-section.features {
-    padding-top: 85px;
-    padding-bottom: 70px;
-}
-
 section.features h2 {
     margin-bottom: 16px;
 }
@@ -250,10 +275,6 @@ section.features aside ul a {
 }
 
 /* designed-dev section */
-section.designed-dev {
-    padding-top: 85px;
-    padding-bottom: 70px;
-}
 
 section.designed-dev p {
     margin-top: 35px;
@@ -272,8 +293,99 @@ section.designed-dev .slide img {
     width: 100%;
 }
 
-/* FOOTER CONTENT */
+/* business-features section */
+section.business-features {
+    padding-top: 82px;
+    padding-bottom: 90px;
+}
 
+section.business-features div:nth-of-type(1n + 2){
+    margin-top: 35px;
+}
+
+section.business-features div:nth-of-type(1n + 2) p {
+    margin-bottom: 18px;
+}
+
+/* regions section */
+section.regions {
+    padding: 80px 0;
+}
+
+section.regions h2 {
+    margin-bottom: 10px;
+}
+
+section.regions table {
+    width: 100%;
+    border-spacing: 0px;
+}
+section.regions table:first-of-type {
+    margin-bottom: 15px;
+}
+
+section.regions table tr {
+    line-height: 40px;
+}
+section.regions table tr td{
+    border-spacing: 0;
+    border-bottom: 1px solid #f3f6fb;
+}
+
+section.regions table tr:last-child td {
+    border: none;
+}
+
+section.regions table tr > td:last-of-type {
+    text-align: right;
+}
+
+/* about us section */
+section.about-us .slider {
+    margin-top: 98px;
+}
+section.about-us .slide {
+    padding: 40px 0;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.about-us .slide > div:first-of-type {
+    margin: 12px 0;
+}
+
+.about-us .slide > div:last-of-type {
+    margin-top: 32px;
+}
+
+.about-us .slide-number {
+    margin-top: 35px;
+}
+/* FOOTER CONTENT */
+footer {
+    padding: 60px 0;
+    background-color: #031c4e;
+}
+
+footer .credits > div:first-of-type,
+footer a {
+    color: #7a859d;
+}
+
+footer .small-text {
+    color: #415376;
+}
+
+footer .credits li{
+    display: inline-block;
+    margin-right: 10px;
+}
+footer h3 {
+    margin-top: 1em;
+}
+footer li {
+    line-height: 2em;
+}
 /* RESPONSIVE */
 /* MD TABLET 768 > */
 @media screen and (min-width: 768px) {
@@ -289,7 +401,7 @@ section.designed-dev .slide img {
         margin: auto;
     }
     
-    .slider a {
+    .slider > a {
         visibility: visible;
         display: inline-block;
         position: absolute;
@@ -297,11 +409,11 @@ section.designed-dev .slide img {
         transform: translateY(50%);
         font-size: 2.5rem;
     }
-    .slider a:first-of-type {
+    .slider > a:first-of-type {
         right: 105%;
         color: #6f7b97;
     }
-    .slider a:last-of-type {
+    .slider > a:last-of-type {
         left: 105%;
     }
 
